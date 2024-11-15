@@ -1,0 +1,8 @@
+# Files
+*.pt
+*.onnx
+
+# Folders
+runs
+eggs-dataset
+__pycache__
