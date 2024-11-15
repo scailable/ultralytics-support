@@ -60,7 +60,7 @@ If the model's performance is satisfactory, proceed to the next step. Otherwise,
 To deploy with the Nx AI Manager, the model must be converted to the ONNX format. The `src/deploy.sh` script will convert the model to ONNX and save it in the `runs/detect/train` directory.
 
 ```bash
-bash src/export.sh ./runs/detect/train2/weights/best.pt 416 B-eggs W-eggs
+bash src/export.sh ./runs/detect/train/weights/best.pt 416 B-eggs W-eggs
 ```
 >The general syntax for the script is: `bash src/export.sh <pt_path> <imgsz> <class1> <class2> ... <classN>`
 
