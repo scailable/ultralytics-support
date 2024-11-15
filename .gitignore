@@ -1,6 +1,7 @@
 # Files
 *.pt
 *.onnx
+output.jpg
 
 # Folders
 runs

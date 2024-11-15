@@ -22,7 +22,7 @@ For the sake of example, this guide will involve the training and deployment of 
 
 - x86_64 based Linux machine, preferably Ubuntu 20.04 or later.
 - Python 3.10 or later.
-- Repository cloned: `git clone ...`
+- Repository cloned: `git clone https://github.com/scailable/ultralytics-support`
 - Requirements installed: `pip install -r requirements.txt  --user`
 - Network Optix AI Manager installed on the target machine.
 - Roboflow account to download the dataset.
@@ -46,7 +46,7 @@ The model will be developed using the YOLOv11n architecture. A generic training 
 To train the model, run the following command:
 
 ```bash
-python3 src/train.py --model yolo11n.pt --data src/eggs-dataset/data.yaml --epochs 1 --imgsz 416 --device cpu --batch_size 8
+python3 src/train.py --model yolo11n.pt --data src/eggs-dataset/data.yaml --epochs 100 --imgsz 416 --device cpu --batch_size 8
 ```
 
 > The model training might take minutes to hours, depending on the machine's computational power; use a GPU for faster training.  
@@ -60,7 +60,7 @@ If the model's performance is satisfactory, proceed to the next step. Otherwise,
 To deploy with the Nx AI Manager, the model must be converted to the ONNX format. The `src/deploy.sh` script will convert the model to ONNX and save it in the `runs/detect/train` directory.
 
 ```bash
-bash src/export.sh ./runs/detect/train/weights/best.pt 416 B-eggs W-eggs
+bash src/export.sh ./runs/detect/train2/weights/best.pt 416 B-eggs W-eggs
 ```
 >The general syntax for the script is: `bash src/export.sh <pt_path> <imgsz> <class1> <class2> ... <classN>`
 
@@ -85,7 +85,7 @@ The model can then be deployed by following the steps mentioned [here](https://n
 
 The model's output should looks something like this:
 
-TODO: Add image
+<img src="_imgs/final-output.png" width="400">
 
 ## Support
 
