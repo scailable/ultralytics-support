@@ -34,7 +34,7 @@ The dataset used for training the model can be downloaded from the following lin
 You can download the dataset in the YOLOv11 format directly from the Roboflow platform, or by using the following command:
 
 ```bash
-export ROBOFLOW_API_KEY=fQnsYMSK7xMbMKJ85P8p
+export ROBOFLOW_API_KEY=<replace-api-key>
 python3 src/download_data.py
 ```
 The script will download the dataset in the YOLOv11 format and extract it to the `src/eggs-dataset` directory.
