@@ -27,6 +27,30 @@ For the sake of example, this guide will involve the training and deployment of 
 - Network Optix AI Manager installed on the target machine.
 - Roboflow account to download the dataset.
 
+## ONNX version 1.15.0
+
+To meet the compatibility requirements for Nx AI Manager XPU runtimes, we advise using or exporting only ONNX versions up to 1.15.0. This version is solely compatible with Python 3.11.
+We refresh our runtimes at least every six months, so feel free to check back periodically for updates on the latest ONNX version support.
+To install ONNX 1.15.0 for Python 3.11, you can use the following pip command:
+
+```
+pip install onnx==1.15.0
+```
+
+For inference purposes, ONNX models are typically executed using the ONNX Runtime. The ONNX Runtime version 1.17.0 supports ONNX opset version 20 and is compatible with Python 3.11. To install the ONNX Runtime for CPU execution, use:
+
+```
+pip install onnxruntime==1.17.0
+```
+
+If you require GPU support, you can install the GPU version of ONNX Runtime:
+
+```
+pip install onnxruntime-gpu==1.17.0
+```
+
+Always ensure your development environment aligns with the above versions to maintain compatibility with your Nx AI Manager XPU runtimes.
+
 ## Dataset
 
 The dataset used for training the model can be downloaded from the following link: [Chicken and Egg Dataset](https://universe.roboflow.com/egg-detection-mixed-eggs/egg-detection-model-4wo1k/dataset/3).
