@@ -21,9 +21,11 @@ For the sake of example, this guide will involve the training and deployment of 
 ## Prerequisites
 
 - x86_64 based Linux machine, preferably Ubuntu 20.04 or later.
-- Python 3.10 or later.
+- Python 3.10.
 - Repository cloned: `git clone https://github.com/scailable/ultralytics-support`
-- Requirements installed: `pip install -r requirements.txt  --user`
+- Fresh virtual environment created: `python3 -m venv venv`
+- Virtual environment activated: `source venv/bin/activate`
+- Requirements installed: `pip install -r requirements.txt`
 - Network Optix AI Manager installed on the target machine.
 - Roboflow account to download the dataset.
 
